@@ -263,9 +263,9 @@ ssp_autochenkin() {
             login_status=$(echo ${login} | jq -r '.msg' 2>&1)
 
             login_log_text="\n用户 ${user_count}\n"
-            login_log_text="${login_log_text}签到站点: ${domain_text}\n"
-            login_log_text="${login_log_text}签到用户: ${username_text}\n"
-            login_log_text="${login_log_text}签到时间: ${start_time}\n"
+            login_log_text="${login_log_text}签到站点: ${domain_text}\r"
+            login_log_text="${login_log_text}签到用户: ${username_text}\r"
+            login_log_text="${login_log_text}签到时间: ${start_time}\r"
 
             if [ "${login_code}" == "1" ]; then
                 userinfo=$(curl -k -s -G -b ${COOKIE_PATH} "${domain}/getuserinfo")
@@ -302,13 +302,13 @@ ssp_autochenkin() {
                     fi
 
                     user_log_text="\n用户等级: VIP${clasx}\n"
-                    user_log_text="${user_log_text}用户余额: ${money} CNY\n"
-                    user_log_text="${user_log_text}用户限速: ${node_speedlimit} Mbps\n"
-                    user_log_text="${user_log_text}总流量: ${transfer_enable_text}\n"
-                    user_log_text="${user_log_text}剩余流量: ${transfer_used_text}\n"
-                    user_log_text="${user_log_text}已使用流量: ${last_day_t_text}\n"
-                    user_log_text="${user_log_text}等级过期时间: ${class_expire}\n"
-                    user_log_text="${user_log_text}账户过期时间: ${expire_in}\n"
+                    user_log_text="${user_log_text}用户余额: ${money} CNY\r"
+                    user_log_text="${user_log_text}用户限速: ${node_speedlimit} Mbps\r"
+                    user_log_text="${user_log_text}总流量: ${transfer_enable_text}\r"
+                    user_log_text="${user_log_text}剩余流量: ${transfer_used_text}\r"
+                    user_log_text="${user_log_text}已使用流量: ${last_day_t_text}\r"
+                    user_log_text="${user_log_text}等级过期时间: ${class_expire}\r"
+                    user_log_text="${user_log_text}账户过期时间: ${expire_in}\r"
                     user_log_text="${user_log_text}上次签到时间: ${last_check_in_time_text}"
                 else
                     user_log_text=""
