@@ -302,7 +302,7 @@ ssp_autochenkin() {
                     fi
 
                     user_log_text="\n用户等级: VIP${clasx}\n"
-                    user_log_text="${user_log_text}用户余额: ${money} CNY\r"
+                    user_log_text="${user_log_text}用户余额: ${money} CNY\n"
                     user_log_text="${user_log_text}用户限速: ${node_speedlimit} Mbps\n"
                     user_log_text="${user_log_text}总流量: ${transfer_enable_text}\n"
                     user_log_text="${user_log_text}剩余流量: ${transfer_used_text}\n"
